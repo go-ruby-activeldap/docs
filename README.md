@@ -3,13 +3,11 @@
 # go-ruby-activeldap/docs
 
 Versioned documentation for [go-ruby-activeldap](https://github.com/go-ruby-activeldap), built with
-[MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and versioned with
-[mike](https://github.com/jimporter/mike). Served at <https://go-ruby-activeldap.github.io/docs/>.
+[Hugo](https://gohugo.io/) and this fleet's [Hextra fork](https://github.com/tannevaled/hextra) — upstream Hextra plus the opt-in features the fleet's sites use. Served at <https://go-ruby-activeldap.github.io/docs/>.
 
 ## Local preview
 
 ```bash
-python -m venv .venv && . .venv/bin/activate
-pip install -r requirements.txt
-mkdocs serve
+git submodule update --init --recursive   # themes/hextra, pinned at a release tag
+hugo server                               # http://localhost:1313
 ```

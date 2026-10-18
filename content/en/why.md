@@ -1,4 +1,9 @@
-# Why pure Go
+---
+title: "Why pure Go"
+weight: 20
+---
+
+# Why pure Go {#why-pure-go}
 
 `go-ruby-activeldap/activeldap` reimplements Ruby's `activeldap` in **pure Go, with cgo
 disabled**. The slice of Ruby it covers is **deterministic and
@@ -8,7 +13,7 @@ and the directory it talks to. The live piece, the directory connection itself,
 is a Net::LDAP client; everything above it is exactly the part that can — and
 should — live as a standalone Go library, separate from the interpreter.
 
-## Extracted for reuse, reusable by anyone
+## Extracted for reuse, reusable by anyone {#extracted-for-reuse-reusable-by-anyone}
 
 - any Go program can import `github.com/go-ruby-activeldap/activeldap` directly, with no
   Ruby runtime, to talk to an LDAP directory the ActiveRecord way;
@@ -19,7 +24,7 @@ should — live as a standalone Go library, separate from the interpreter.
 - the behaviour is pinned by a **differential oracle** against reference Ruby,
   independent of any one consumer.
 
-## Why pure Go matters here
+## Why pure Go matters here {#why-pure-go-matters-here}
 
 Because the library is CGO-free, it:
 
@@ -30,4 +35,4 @@ Because the library is CGO-free, it:
   `PATH` (against a test directory), while the cross-arch lanes still validate the
   mapping, filter-building and LDIF logic itself.
 
-See [Reference](reference.md) for the import path and API.
+See [Reference]({{< relref "reference.md" >}}) for the import path and API.

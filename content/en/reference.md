@@ -1,29 +1,34 @@
-# Reference
+---
+title: "Reference"
+weight: 30
+---
+
+# Reference {#reference}
 
 The public API lives at the module root (`github.com/go-ruby-activeldap/activeldap`). It is
 **Ruby-shaped but Go-idiomatic**: names mirror Ruby's `activeldap`, while the surface
 follows Go conventions — value types, explicit errors, no global state.
 
-## Install
+## Install {#install}
 
 ```sh
 go get github.com/go-ruby-activeldap/activeldap
 ```
 
-## Import
+## Import {#import}
 
 ```go
 import "github.com/go-ruby-activeldap/activeldap"
 ```
 
-## Connection setup
+## Connection setup {#connection-setup}
 
 The mapper speaks to a directory over a Net::LDAP connection: a host, port, bind
 DN and credentials, and a base DN. Configure the connection once, then map object
 classes against that base DN and run `find` / `search` / CRUD through it. The
 connection surface mirrors reference `activeldap`'s `ActiveLdap::Base.setup_connection`.
 
-## API reference
+## API reference {#api-reference}
 
 The authoritative, always-current API reference is generated from the source by
 pkg.go.dev:
@@ -36,7 +41,7 @@ validations, associations and LDIF — and the full, up-to-date surface. This pa
 intentionally links to those canonical sources rather than duplicating signatures
 that could drift out of date.
 
-## Conformance
+## Conformance {#conformance}
 
 Behaviour is pinned by a **differential oracle** against reference Ruby: a corpus
 of mappings, filters, DN compositions, validations and LDIF round-trips is run

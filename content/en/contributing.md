@@ -1,9 +1,14 @@
-# Contributing
+---
+title: "Contributing"
+weight: 40
+---
+
+# Contributing {#contributing}
 
 Contributions are welcome. `go-ruby-activeldap/activeldap` is built to a small set of
 non-negotiable rules — they keep it pure-Go, correct, and reference-faithful.
 
-## Hard rules
+## Hard rules {#hard-rules}
 
 - **Build from source — no vendoring.** Everything compiles from source.
 - **100% test coverage target, enforced in CI.** New code ships with tests, and
@@ -18,7 +23,7 @@ non-negotiable rules — they keep it pure-Go, correct, and reference-faithful.
 - **A reusable library, not the interpreter.** Anything that needs a live Ruby
   binding belongs in the consumer (`rbgo`), not here.
 
-## Workflow
+## Workflow {#workflow}
 
 1. Pick or open an issue describing the change.
 2. Work test-first: add the differential / unit tests, then make them pass.
@@ -32,7 +37,7 @@ non-negotiable rules — they keep it pure-Go, correct, and reference-faithful.
 
 4. Open a PR in English, referencing the issue.
 
-## Where things live
+## Where things live {#where-things-live}
 
 The library is in [`github.com/go-ruby-activeldap/activeldap`](https://github.com/go-ruby-activeldap/activeldap).
 This documentation site is in [`github.com/go-ruby-activeldap/docs`](https://github.com/go-ruby-activeldap/docs).

@@ -1,4 +1,9 @@
-# go-ruby-activeldap documentation
+---
+title: "Home"
+weight: 10
+---
+
+# go-ruby-activeldap documentation {#go-ruby-activeldap-documentation}
 
 **Pure-Go (CGO=0), MRI-faithful reimplementation of the ActiveLdap gem — an ActiveRecord-style object–LDAP mapper (attribute mapping, search/find, CRUD, validations, associations, LDIF) over Net::LDAP.**
 
@@ -15,18 +20,21 @@ native module — the same pattern as
 [go-ruby-yaml](https://github.com/go-ruby-yaml/yaml). The dependency runs the
 other way: this library has **no dependency on the Ruby runtime**.
 
-!!! success "Status: pure-Go, CGO=0, differential-tested"
-    A faithful pure-Go port of Ruby's `activeldap`, validated against reference Ruby,
-    at 100% coverage, `gofmt` + `go vet` clean, CI green across the six 64-bit Go
-    targets and three OSes.
+{{< callout type="info" >}}
+**Status: pure-Go, CGO=0, differential-tested**
 
-## Install
+A faithful pure-Go port of Ruby's `activeldap`, validated against reference Ruby,
+at 100% coverage, `gofmt` + `go vet` clean, CI green across the six 64-bit Go
+targets and three OSes.
+{{< /callout >}}
+
+## Install {#install}
 
 ```sh
 go get github.com/go-ruby-activeldap/activeldap
 ```
 
-## Repositories
+## Repositories {#repositories}
 
 | Repo | What it is |
 | --- | --- |
@@ -35,7 +43,7 @@ go get github.com/go-ruby-activeldap/activeldap
 | [`go-ruby-activeldap.github.io`](https://github.com/go-ruby-activeldap/go-ruby-activeldap.github.io) | the organization landing page (Hugo) |
 | [`brand`](https://github.com/go-ruby-activeldap/brand) | logo and brand assets |
 
-## What it maps
+## What it maps {#what-it-maps}
 
 - **Attribute mapping** — LDAP object classes and their attributes are surfaced as
   object fields, with the aliasing, multi-valued and required-attribute rules
@@ -50,7 +58,7 @@ go get github.com/go-ruby-activeldap/activeldap
   (for example groups and their members).
 - **LDIF** — import and export entries as LDIF.
 
-## Principles
+## Principles {#principles}
 
 - **Pure Go, `CGO_ENABLED=0`** — trivial cross-compilation, a single static
   binary, no C toolchain.
@@ -60,10 +68,10 @@ go get github.com/go-ruby-activeldap/activeldap
   runs the other way; `rbgo` binds this module.
 - **100% test coverage** is the target, enforced as a CI gate, across 6 arches.
 
-## Where to go next
+## Where to go next {#where-to-go-next}
 
-- [Why pure Go](why.md) — why this slice of Ruby lives as a standalone,
+- [Why pure Go]({{< relref "why.md" >}}) — why this slice of Ruby lives as a standalone,
   interpreter-independent Go library.
-- [Reference](reference.md) — install, import path and the API reference.
+- [Reference]({{< relref "reference.md" >}}) — install, import path and the API reference.
 
 Source lives at [github.com/go-ruby-activeldap/activeldap](https://github.com/go-ruby-activeldap/activeldap).
